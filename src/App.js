@@ -3,6 +3,7 @@ import Container from './components/Container';
 import Balance from './components/Balance';
 import Header from './components/Header';
 import GlobalStyle from './styles/global';
+import IncomeExpenses from './components/IncomeExpenses';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Container>
         <Balance />
+        <IncomeExpenses />
       </Container>
       <GlobalStyle />
     </>
