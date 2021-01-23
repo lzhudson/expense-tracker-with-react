@@ -22,8 +22,10 @@ export default createGlobalStyle`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     margin: 0;
     font-family: 'Lato', sans-serif;
+  }
+  html, input {
+    min-height: 100vh;
   }
 `;
