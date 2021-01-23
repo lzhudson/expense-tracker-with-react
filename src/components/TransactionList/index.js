@@ -1,15 +1,25 @@
 import React from 'react';
-import { List } from './styles';
+import { List, ListItem } from './styles';
 
 export default function TransactionList() {
   return (
     <>
       <h3>History</h3>
       <List>
-        <li>
-          Cash <span>-$400</span>
+        <ListItem type="plus">
+          <div>
+            <span>Cash</span>
+            <span>+$400</span>
+          </div>
           <button type="button">X</button>
-        </li>
+        </ListItem>
+        <ListItem type="minus">
+          <div>
+            <span>Cash</span>
+            <span>-$400</span>
+          </div>
+          <button type="button">X</button>
+        </ListItem>
       </List>
     </>
   );
