@@ -4,36 +4,41 @@ export const List = styled.ul`
   list-style-type: none;
   padding: 0;
   margin-bottom: 40px;
-
-  li {
+`;
+export const ListItem = styled.li`
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  position: relative;
+  &:hover button {
+    opacity: 1;
+  }
+  div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     color: #333;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
     padding: 10px;
-    margin: 10px 0;
-    border-right: 5px solid
+    border-left: 5px solid
       ${(props) => (props.type === 'plus' ? '#2ecc71' : '#c0392b')};
-
-    button {
-      cursor: pointer;
-      background-color: #e74c3c;
-      border: 0;
-      color: #fff;
-      font-size: 20px;
-      line-height: 20px;
-      padding: 2px 5px;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translate(-100%, -50%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
+    span {
+      color: #333;
     }
-    &:hover button {
-      opacity: 1;
-    }
+  }
+  button {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 10%;
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    padding: 2px 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 `;
