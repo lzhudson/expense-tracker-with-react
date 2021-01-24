@@ -25,6 +25,8 @@
         "prettier/prettier": "error",
         "no-param-reassign": "off",
         "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "jsx-a11y/label-has-for":"off",
+        "jsx-a11y/label-has-associated-control": "off"
     }
 }
