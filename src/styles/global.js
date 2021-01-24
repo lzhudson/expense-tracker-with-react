@@ -25,7 +25,7 @@ export default createGlobalStyle`
     margin: 0;
     font-family: 'Lato', sans-serif;
   }
-  html, input {
+  html {
     min-height: 100vh;
   }
 `;
