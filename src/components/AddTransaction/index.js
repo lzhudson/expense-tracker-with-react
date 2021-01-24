@@ -7,6 +7,15 @@ export default function AddTransaction() {
     amount: '',
   });
 
+  const handleInputChange = (e) => {
+    const valueInput = e.target.value;
+    const nameInput = e.target.name;
+    setFormState({
+      ...formState,
+      [nameInput]: valueInput,
+    });
+    console.log(formState);
+  };
   return (
     <>
       <h3>Add Transaction</h3>
