@@ -22,7 +22,14 @@ export default function AddTransaction() {
       <FormTransaction>
         <FormControl>
           <label htmlFor="text">Text</label>
-          <input type="text" placeholder="Enter text..." id="text" />
+          <input
+            onChange={(e) => handleInputChange(e)}
+            type="text"
+            value={formState.text}
+            placeholder="Enter text..."
+            id="text"
+            name="text"
+          />
         </FormControl>
         <FormControl>
           <label htmlFor="amount">
