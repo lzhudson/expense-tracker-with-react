@@ -5,6 +5,7 @@ import Header from './components/Header';
 import GlobalStyle from './styles/global';
 import IncomeExpenses from './components/IncomeExpenses';
 import TransactionList from './components/TransactionList';
+import AddTransaction from './components/AddTransaction';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Balance />
         <IncomeExpenses />
         <TransactionList />
+        <AddTransaction />
       </Container>
       <GlobalStyle />
     </>
