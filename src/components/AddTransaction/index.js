@@ -29,7 +29,14 @@ export default function AddTransaction() {
             Amount <br />
             (negative - expense, positive - income)
           </label>
-          <input type="number" placeholder="Enter amount..." id="amount" />
+          <input
+            value={formState.amount}
+            onChange={(e) => handleInputChange(e)}
+            type="number"
+            placeholder="Enter amount..."
+            id="amount"
+            name="amount"
+          />
         </FormControl>
         <button type="submit">Add Transaction</button>
       </FormTransaction>
