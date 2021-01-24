@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FormTransaction, FormControl } from './styles';
 
 export default function AddTransaction() {
+  const [formState, setFormState] = useState({
+    text: '',
+    amount: '',
+  });
+
   return (
     <>
       <h3>Add Transaction</h3>
