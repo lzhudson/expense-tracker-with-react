@@ -9,11 +9,11 @@ export default function IncomeExpenses() {
   const incomeTransactionsTotal = filterTransactionsByType(
     transactions,
     'income'
-  ).reduce((acc, transaction) => acc + transaction.amount, 0);
+  ).reduce((acc, transaction) => acc + Number(transaction.amount), 0);
   const expenseTransactionsTotal = filterTransactionsByType(
     transactions,
     'expense'
-  ).reduce((acc, transaction) => acc + transaction.amount, 0);
+  ).reduce((acc, transaction) => acc + Number(transaction.amount), -0);
   return (
     <IncomeExpensesContainer>
       <div>
