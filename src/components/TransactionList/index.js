@@ -5,7 +5,7 @@ import { formatPrice } from '../../util/format';
 import { typeTransaction } from '../../util/utils';
 
 export default function TransactionList() {
-  const { transactions } = useContext(GlobalContext);
+  const { transactions, deleteTransaction } = useContext(GlobalContext);
   const transactionList = transactions.map((transaction) => ({
     ...transaction,
     priceFormatted: formatPrice(transaction.amount),
@@ -21,7 +21,12 @@ export default function TransactionList() {
               <span>{transaction.text}</span>
               <span>{transaction.priceFormatted}</span>
             </div>
-            <button type="button">X</button>
+            <button
+              onClick={() => deleteTransaction(transaction.id)}
+              type="button"
+            >
+              X
+            </button>
           </ListItem>
         ))}
       </List>
