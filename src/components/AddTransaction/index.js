@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FormTransaction, FormControl } from './styles';
+import { GlobalContext } from '../../context/GlobalState';
 
 export default function AddTransaction() {
   const [formState, setFormState] = useState({
     text: '',
     amount: '',
   });
-
+  const { addTransaction } = useContext(GlobalContext);
   const handleInputChange = (e) => {
     const valueInput = e.target.value;
     const nameInput = e.target.name;
@@ -14,12 +15,19 @@ export default function AddTransaction() {
       ...formState,
       [nameInput]: valueInput,
     });
-    console.log(formState);
+  };
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const newTransaction = {
+      id: Math.floor(Math.random() * 100000000),
+      ...formState,
+    };
+    addTransaction(newTransaction);
   };
   return (
     <>
       <h3>Add Transaction</h3>
-      <FormTransaction>
+      <FormTransaction onSubmit={onSubmit}>
         <FormControl>
           <label htmlFor="text">Text</label>
           <input
