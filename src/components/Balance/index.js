@@ -6,7 +6,7 @@ import { formatPrice } from '../../util/format';
 export default function Balance() {
   const { transactions } = useContext(GlobalContext);
   const totalBalance = transactions.reduce(
-    (acc, transaction) => acc + transaction.amount,
+    (acc, transaction) => acc + Number(transaction.amount),
     0
   );
   return (
