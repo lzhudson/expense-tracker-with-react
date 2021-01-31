@@ -26,6 +26,7 @@ export const GlobalProvider = ({ children }) => {
       value={{
         transactions: state.transactions,
         dispatch,
+        deleteTransaction,
       }}
     >
       {children}
