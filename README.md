@@ -52,5 +52,6 @@ yarn start
 **Answer:**
 
 - [React](https://pt-br.reactjs.org/)
+- [Styled Components](https://styled-components.com)
 
 Made with love by [Hudson Holanda](https://github.com/lzhudson) 💜🚀
